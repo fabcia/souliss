@@ -191,7 +191,7 @@
 #define Souliss_T3n_SetPointDeadBand	0.1			// SetPoint Degrees Deadband
 
 #ifndef T3N_DEADBAND_INSKETCH
-	#define Souliss_T3n_DeadBand		0.1			// Degrees Deadband
+	#define Souliss_T3n_DeadBand		0.05			// Degrees Deadband
 #endif
 	
 #ifndef T3N_HYSTERESIS_INSKETCH
