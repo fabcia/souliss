@@ -62,7 +62,7 @@ U8 Souliss_Logic_T51(U8 *memory_map, U8 slot, const float abs_deadband, U8 *trig
 		// If previously set as NaN or if there is a change greater than the deadband, update the output
 		if((((C8TO16(memory_map + MaCaco_IN_s + slot)) != (C8TO16(memory_map + MaCaco_OUT_s + slot))) && 
 				C8TO16(memory_map + MaCaco_OUT_s + slot) == 0xFE00) || 
-				(abs(m_in - m_out) > abs_deadband))
+				(fabs(m_in - m_out) > abs_deadband)) // use fabs instead abs for esp8266 lib >= 2.4.0
 		{
 			// Store the new value
 			memory_map[MaCaco_OUT_s + slot] = memory_map[MaCaco_IN_s + slot];
